@@ -31,3 +31,13 @@ jobs:
           add: "./api_pb"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push java
+        uses: peaceiris/actions-gh-pages@v3.5.5
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          external_repository: MinterTeam/node-grpc-java
+          publish_branch: master
+          publish_dir: ./gen/java
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
