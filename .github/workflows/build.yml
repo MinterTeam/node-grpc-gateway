@@ -14,11 +14,11 @@ jobs:
       - name: Install Protoc
         uses: arduino/setup-protoc@master
         with:
-          version: '3.17'
+          version: '3.18'
 
       - uses: actions/setup-go@v2
         with:
-          go-version: '1.16'
+          go-version: '1.17'
 
       - run: go generate gen.go
 
@@ -28,6 +28,6 @@ jobs:
           author_name: Github Actions
           author_email: klim0v-sergey@yandex.ru
           message: "generate files"
-          add: "."
+          add: "./api_pb"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
