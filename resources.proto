@@ -3,6 +3,9 @@ syntax = "proto3";
 package api_pb;
 
 option go_package = "github.com/MinterTeam/node-grpc-gateway/gen/go;api_pb";
+option java_multiple_files = true;
+option java_package = "network.minter.grpc";
+option swift_prefix = "Minter";
 
 import "google/protobuf/struct.proto";
 import "google/protobuf/any.proto";
@@ -729,8 +732,8 @@ message TransactionResponse {
     Coin gas_coin = 9;
     string type_hex = 17;
     enum Type {
-        _ = 0;
-        Send                         = 1;
+        unknown = 0;
+        Send = 1;
         SellCoin                     = 2;
         SellAllCoin                  = 3;
         BuyCoin                      = 4;

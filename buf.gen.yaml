@@ -14,6 +14,12 @@ plugins:
       - paths=source_relative
       - generate_unbound_methods=true
       - logtostderr=true
+  - name: java
+    out: gen/java
+  - name: kotlin
+    out: gen/kotlin
+  - name: cpp
+    out: gen/cpp
   - name: openapiv2
     out: gen/openapiv2
     opt:
