@@ -5,21 +5,21 @@ plugins:
     opt:
       - paths=source_relative
   - name: go-grpc
-    out: gen/go
+    out: gen/proto/go
     opt:
       - paths=source_relative
   - name: grpc-gateway
-    out: gen/go
+    out: gen/proto/go
     opt:
       - paths=source_relative
       - generate_unbound_methods=true
       - logtostderr=true
   - name: java
-    out: gen/java
+    out: gen/proto/java
   - name: kotlin
-    out: gen/kotlin
+    out: gen/proto/kotlin
   - name: cpp
-    out: gen/cpp
+    out: gen/proto/cpp
   - name: openapiv2
     out: gen/openapiv2
     opt:

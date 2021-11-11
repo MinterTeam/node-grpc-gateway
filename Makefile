@@ -9,7 +9,7 @@ all:
 	mkdir -p api_pb
 	buf generate
 	rm -rf api_pb/*
-	mv ./gen/go/* ./api_pb/
+	mv ./gen/proto/go/* ./api_pb/
 	rm ./docs/api.swagger.json
 	mv ./gen/openapiv2/api.swagger.json ./docs/
 	sed -i 's~api_pb~~g' ./docs/api.swagger.json
