@@ -302,7 +302,7 @@ service ApiService {
     }
     // WaitLists
     //
-    // WaitLists returns the list stakes in waitlist.
+    // WaitLists returns the list addresses and stakes in waitlist.
     rpc WaitLists (WaitListsRequest) returns (WaitListsResponse) {
         option (google.api.http) = {
             get: "/waitlists"
