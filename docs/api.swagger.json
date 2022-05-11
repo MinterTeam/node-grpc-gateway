@@ -2348,7 +2348,7 @@
     "/waitlists": {
       "get": {
         "summary": "WaitLists",
-        "description": "WaitLists returns the list stakes in waitlist.",
+        "description": "WaitLists returns the list addresses and stakes in waitlist.",
         "operationId": "WaitLists",
         "responses": {
           "200": {

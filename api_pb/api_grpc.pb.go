@@ -137,7 +137,7 @@ type ApiServiceClient interface {
 	WaitList(ctx context.Context, in *WaitListRequest, opts ...grpc.CallOption) (*WaitListResponse, error)
 	// WaitLists
 	//
-	// WaitLists returns the list stakes in waitlist.
+	// WaitLists returns the list addresses and stakes in waitlist.
 	WaitLists(ctx context.Context, in *WaitListsRequest, opts ...grpc.CallOption) (*WaitListsResponse, error)
 	// TestBlock
 	//
@@ -724,7 +724,7 @@ type ApiServiceServer interface {
 	WaitList(context.Context, *WaitListRequest) (*WaitListResponse, error)
 	// WaitLists
 	//
-	// WaitLists returns the list stakes in waitlist.
+	// WaitLists returns the list addresses and stakes in waitlist.
 	WaitLists(context.Context, *WaitListsRequest) (*WaitListsResponse, error)
 	// TestBlock
 	//
