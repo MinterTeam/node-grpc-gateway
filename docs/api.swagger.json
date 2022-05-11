@@ -2344,6 +2344,48 @@
           "Balance"
         ]
       }
+    },
+    "/waitlists": {
+      "get": {
+        "summary": "WaitLists",
+        "description": "WaitLists returns the list stakes in waitlist.",
+        "operationId": "WaitLists",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/WaitListsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Balance"
+        ]
+      }
     }
   },
   "definitions": {
@@ -3346,7 +3388,21 @@
         }
       }
     },
-    "WaitListResponseWait": {
+    "WaitListsResponseAddress": {
+      "type": "object",
+      "properties": {
+        "address": {
+          "type": "string"
+        },
+        "list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/WaitListsResponseAddressWait"
+          }
+        }
+      }
+    },
+    "WaitListsResponseAddressWait": {
       "type": "object",
       "properties": {
         "public_key": {
@@ -4535,6 +4591,31 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/WaitListResponseWait"
+          }
+        }
+      }
+    },
+    "WaitListResponseWait": {
+      "type": "object",
+      "properties": {
+        "public_key": {
+          "type": "string"
+        },
+        "coin": {
+          "$ref": "#/definitions/Coin"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "WaitListsResponse": {
+      "type": "object",
+      "properties": {
+        "addresses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/WaitListsResponseAddress"
           }
         }
       }
