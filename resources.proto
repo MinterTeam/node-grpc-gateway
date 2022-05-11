@@ -1139,6 +1139,11 @@ message FrozenResponse {
     repeated Frozen frozen = 1;
 }
 
+message WaitListsRequest {
+    uint64 height = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+         type: INTEGER
+    }];
+}
 message WaitListRequest {
     string public_key = 1;
     string address = 2;
@@ -1153,4 +1158,16 @@ message WaitListResponse {
         string value = 2;
     }
     repeated Wait list = 1;
+}
+message WaitListsResponse {
+    message Address {
+        string address = 2;
+        message Wait {
+            string public_key = 3;
+            Coin coin = 1;
+            string value = 2;
+        }
+        repeated Wait list = 1;
+    }
+    repeated Address addresses = 1;
 }

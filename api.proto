@@ -300,6 +300,15 @@ service ApiService {
         };
         option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Balance";
     }
+    // WaitLists
+    //
+    // WaitLists returns the list stakes in waitlist.
+    rpc WaitLists (WaitListsRequest) returns (WaitListsResponse) {
+        option (google.api.http) = {
+            get: "/waitlist/{address}"
+        };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Balance";
+    }
 
     // TestBlock
     //
