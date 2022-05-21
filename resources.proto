@@ -783,11 +783,17 @@ message CandidatesRequest {
         off = 1;
         on = 2;
         validator = 3;
+        deleted = 4;
     }
     CandidateStatus status = 3;
 }
 message CandidatesResponse {
     repeated CandidateResponse candidates = 3;
+    message Deleted {
+        uint64 id = 1;
+        string public_key = 2;
+    }
+    repeated Deleted deleted = 4;
 }
 
 message CoinIdRequest {
