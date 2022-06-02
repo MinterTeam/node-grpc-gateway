@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Minter Node API v2",
-    "version": "1.6.0",
+    "version": "1.7.0",
     "contact": {
       "name": "Minter gRPC-Gateway",
       "url": "https://github.com/MinterTeam/node-grpc-gateway",
@@ -497,7 +497,8 @@
               "all",
               "off",
               "on",
-              "validator"
+              "validator",
+              "deleted"
             ],
             "default": "all"
           }
@@ -2344,6 +2345,48 @@
           "Balance"
         ]
       }
+    },
+    "/waitlists": {
+      "get": {
+        "summary": "WaitLists",
+        "description": "WaitLists returns the list addresses and stakes in waitlist.",
+        "operationId": "WaitLists",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/WaitListsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/ErrorBody",
+              "example": {
+                "error": {
+                  "code": "504",
+                  "message": "context deadline exceeded",
+                  "data": {
+                    "operation": "ABC"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "height",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "uint64"
+          }
+        ],
+        "tags": [
+          "Balance"
+        ]
+      }
     }
   },
   "definitions": {
@@ -2810,9 +2853,22 @@
         "all",
         "off",
         "on",
-        "validator"
+        "validator",
+        "deleted"
       ],
       "default": "all"
+    },
+    "CandidatesResponseDeleted": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "public_key": {
+          "type": "string"
+        }
+      }
     },
     "ConnectionStatusChannel": {
       "type": "object",
@@ -3346,7 +3402,21 @@
         }
       }
     },
-    "WaitListResponseWait": {
+    "WaitListsResponseAddress": {
+      "type": "object",
+      "properties": {
+        "address": {
+          "type": "string"
+        },
+        "list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/WaitListsResponseAddressWait"
+          }
+        }
+      }
+    },
+    "WaitListsResponseAddressWait": {
       "type": "object",
       "properties": {
         "public_key": {
@@ -3698,6 +3768,12 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/CandidateResponse"
+          }
+        },
+        "deleted": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CandidatesResponseDeleted"
           }
         }
       }
@@ -4535,6 +4611,31 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/WaitListResponseWait"
+          }
+        }
+      }
+    },
+    "WaitListResponseWait": {
+      "type": "object",
+      "properties": {
+        "public_key": {
+          "type": "string"
+        },
+        "coin": {
+          "$ref": "#/definitions/Coin"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "WaitListsResponse": {
+      "type": "object",
+      "properties": {
+        "addresses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/WaitListsResponseAddress"
           }
         }
       }
