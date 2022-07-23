@@ -127,6 +127,12 @@ message LimitOrdersRequest {
         type: INTEGER
     }];
 }
+message LimitOrdersByOwnerRequest {
+    string address = 1;
+    uint64 height = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+        type: INTEGER
+    }];
+}
 message LimitOrdersResponse {
     repeated LimitOrderResponse orders = 1;
 }
