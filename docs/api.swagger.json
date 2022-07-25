@@ -113,13 +113,10 @@
           {
             "name": "addresses",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
-              "type": "string",
-              "required": [
-                "addresses"
-              ]
+              "type": "string"
             },
             "collectionFormat": "multi"
           },
