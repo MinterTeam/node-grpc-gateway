@@ -34,7 +34,7 @@ var file_api_proto_rawDesc = []byte{
 	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x2d, 0x67, 0x65, 0x6e, 0x2d, 0x6f, 0x70, 0x65, 0x6e,
 	0x61, 0x70, 0x69, 0x76, 0x32, 0x2f, 0x6f, 0x70, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2f, 0x61, 0x6e,
 	0x6e, 0x6f, 0x74, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x32,
-	0x9c, 0x25, 0x0a, 0x0a, 0x41, 0x70, 0x69, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x65,
+	0xa6, 0x26, 0x0a, 0x0a, 0x41, 0x70, 0x69, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x65,
 	0x0a, 0x09, 0x53, 0x75, 0x62, 0x73, 0x63, 0x72, 0x69, 0x62, 0x65, 0x12, 0x18, 0x2e, 0x61, 0x70,
 	0x69, 0x5f, 0x70, 0x62, 0x2e, 0x53, 0x75, 0x62, 0x73, 0x63, 0x72, 0x69, 0x62, 0x65, 0x52, 0x65,
 	0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x19, 0x2e, 0x61, 0x70, 0x69, 0x5f, 0x70, 0x62, 0x2e, 0x53,
@@ -323,19 +323,28 @@ var file_api_proto_rawDesc = []byte{
 	0x62, 0x2e, 0x4c, 0x69, 0x6d, 0x69, 0x74, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x73, 0x52, 0x65, 0x73,
 	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x1e, 0x92, 0x41, 0x06, 0x0a, 0x04, 0x43, 0x6f, 0x69, 0x6e,
 	0x82, 0xd3, 0xe4, 0x93, 0x02, 0x0f, 0x12, 0x0d, 0x2f, 0x6c, 0x69, 0x6d, 0x69, 0x74, 0x5f, 0x6f,
-	0x72, 0x64, 0x65, 0x72, 0x73, 0x12, 0x86, 0x01, 0x0a, 0x09, 0x42, 0x65, 0x73, 0x74, 0x54, 0x72,
-	0x61, 0x64, 0x65, 0x12, 0x18, 0x2e, 0x61, 0x70, 0x69, 0x5f, 0x70, 0x62, 0x2e, 0x42, 0x65, 0x73,
-	0x74, 0x54, 0x72, 0x61, 0x64, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x19, 0x2e,
+	0x72, 0x64, 0x65, 0x72, 0x73, 0x12, 0x87, 0x01, 0x0a, 0x12, 0x4c, 0x69, 0x6d, 0x69, 0x74, 0x4f,
+	0x72, 0x64, 0x65, 0x72, 0x73, 0x42, 0x79, 0x4f, 0x77, 0x6e, 0x65, 0x72, 0x12, 0x21, 0x2e, 0x61,
+	0x70, 0x69, 0x5f, 0x70, 0x62, 0x2e, 0x4c, 0x69, 0x6d, 0x69, 0x74, 0x4f, 0x72, 0x64, 0x65, 0x72,
+	0x73, 0x42, 0x79, 0x4f, 0x77, 0x6e, 0x65, 0x72, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a,
+	0x1b, 0x2e, 0x61, 0x70, 0x69, 0x5f, 0x70, 0x62, 0x2e, 0x4c, 0x69, 0x6d, 0x69, 0x74, 0x4f, 0x72,
+	0x64, 0x65, 0x72, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x31, 0x92, 0x41,
+	0x06, 0x0a, 0x04, 0x43, 0x6f, 0x69, 0x6e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x22, 0x12, 0x20, 0x2f,
+	0x6c, 0x69, 0x6d, 0x69, 0x74, 0x5f, 0x6f, 0x72, 0x64, 0x65, 0x72, 0x73, 0x5f, 0x62, 0x79, 0x5f,
+	0x6f, 0x77, 0x6e, 0x65, 0x72, 0x2f, 0x7b, 0x61, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x7d, 0x12,
+	0x86, 0x01, 0x0a, 0x09, 0x42, 0x65, 0x73, 0x74, 0x54, 0x72, 0x61, 0x64, 0x65, 0x12, 0x18, 0x2e,
 	0x61, 0x70, 0x69, 0x5f, 0x70, 0x62, 0x2e, 0x42, 0x65, 0x73, 0x74, 0x54, 0x72, 0x61, 0x64, 0x65,
-	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x44, 0x92, 0x41, 0x07, 0x0a, 0x05, 0x50,
-	0x72, 0x69, 0x63, 0x65, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x34, 0x12, 0x32, 0x2f, 0x62, 0x65, 0x73,
-	0x74, 0x5f, 0x74, 0x72, 0x61, 0x64, 0x65, 0x2f, 0x7b, 0x73, 0x65, 0x6c, 0x6c, 0x5f, 0x63, 0x6f,
-	0x69, 0x6e, 0x7d, 0x2f, 0x7b, 0x62, 0x75, 0x79, 0x5f, 0x63, 0x6f, 0x69, 0x6e, 0x7d, 0x2f, 0x7b,
-	0x74, 0x79, 0x70, 0x65, 0x7d, 0x2f, 0x7b, 0x61, 0x6d, 0x6f, 0x75, 0x6e, 0x74, 0x7d, 0x42, 0x37,
-	0x5a, 0x35, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x4d, 0x69, 0x6e,
-	0x74, 0x65, 0x72, 0x54, 0x65, 0x61, 0x6d, 0x2f, 0x6e, 0x6f, 0x64, 0x65, 0x2d, 0x67, 0x72, 0x70,
-	0x63, 0x2d, 0x67, 0x61, 0x74, 0x65, 0x77, 0x61, 0x79, 0x2f, 0x67, 0x65, 0x6e, 0x2f, 0x67, 0x6f,
-	0x3b, 0x61, 0x70, 0x69, 0x5f, 0x70, 0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x19, 0x2e, 0x61, 0x70, 0x69, 0x5f, 0x70, 0x62,
+	0x2e, 0x42, 0x65, 0x73, 0x74, 0x54, 0x72, 0x61, 0x64, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
+	0x73, 0x65, 0x22, 0x44, 0x92, 0x41, 0x07, 0x0a, 0x05, 0x50, 0x72, 0x69, 0x63, 0x65, 0x82, 0xd3,
+	0xe4, 0x93, 0x02, 0x34, 0x12, 0x32, 0x2f, 0x62, 0x65, 0x73, 0x74, 0x5f, 0x74, 0x72, 0x61, 0x64,
+	0x65, 0x2f, 0x7b, 0x73, 0x65, 0x6c, 0x6c, 0x5f, 0x63, 0x6f, 0x69, 0x6e, 0x7d, 0x2f, 0x7b, 0x62,
+	0x75, 0x79, 0x5f, 0x63, 0x6f, 0x69, 0x6e, 0x7d, 0x2f, 0x7b, 0x74, 0x79, 0x70, 0x65, 0x7d, 0x2f,
+	0x7b, 0x61, 0x6d, 0x6f, 0x75, 0x6e, 0x74, 0x7d, 0x42, 0x37, 0x5a, 0x35, 0x67, 0x69, 0x74, 0x68,
+	0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x4d, 0x69, 0x6e, 0x74, 0x65, 0x72, 0x54, 0x65, 0x61,
+	0x6d, 0x2f, 0x6e, 0x6f, 0x64, 0x65, 0x2d, 0x67, 0x72, 0x70, 0x63, 0x2d, 0x67, 0x61, 0x74, 0x65,
+	0x77, 0x61, 0x79, 0x2f, 0x67, 0x65, 0x6e, 0x2f, 0x67, 0x6f, 0x3b, 0x61, 0x70, 0x69, 0x5f, 0x70,
+	0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var file_api_proto_goTypes = []interface{}{
@@ -376,45 +385,46 @@ var file_api_proto_goTypes = []interface{}{
 	(*LimitOrderRequest)(nil),            // 34: api_pb.LimitOrderRequest
 	(*LimitOrdersOfPoolRequest)(nil),     // 35: api_pb.LimitOrdersOfPoolRequest
 	(*LimitOrdersRequest)(nil),           // 36: api_pb.LimitOrdersRequest
-	(*BestTradeRequest)(nil),             // 37: api_pb.BestTradeRequest
-	(*SubscribeResponse)(nil),            // 38: api_pb.SubscribeResponse
-	(*HaltsResponse)(nil),                // 39: api_pb.HaltsResponse
-	(*GenesisResponse)(nil),              // 40: api_pb.GenesisResponse
-	(*MinGasPriceResponse)(nil),          // 41: api_pb.MinGasPriceResponse
-	(*NetInfoResponse)(nil),              // 42: api_pb.NetInfoResponse
-	(*StatusResponse)(nil),               // 43: api_pb.StatusResponse
-	(*AddressResponse)(nil),              // 44: api_pb.AddressResponse
-	(*AddressesResponse)(nil),            // 45: api_pb.AddressesResponse
-	(*BlockResponse)(nil),                // 46: api_pb.BlockResponse
-	(*CandidateResponse)(nil),            // 47: api_pb.CandidateResponse
-	(*CandidatesResponse)(nil),           // 48: api_pb.CandidatesResponse
-	(*CoinInfoResponse)(nil),             // 49: api_pb.CoinInfoResponse
-	(*EstimateCoinBuyResponse)(nil),      // 50: api_pb.EstimateCoinBuyResponse
-	(*EstimateCoinSellResponse)(nil),     // 51: api_pb.EstimateCoinSellResponse
-	(*EstimateCoinSellAllResponse)(nil),  // 52: api_pb.EstimateCoinSellAllResponse
-	(*EstimateTxCommissionResponse)(nil), // 53: api_pb.EstimateTxCommissionResponse
-	(*EventsResponse)(nil),               // 54: api_pb.EventsResponse
-	(*MaxGasPriceResponse)(nil),          // 55: api_pb.MaxGasPriceResponse
-	(*MissedBlocksResponse)(nil),         // 56: api_pb.MissedBlocksResponse
-	(*SendTransactionResponse)(nil),      // 57: api_pb.SendTransactionResponse
-	(*TransactionResponse)(nil),          // 58: api_pb.TransactionResponse
-	(*TransactionsResponse)(nil),         // 59: api_pb.TransactionsResponse
-	(*UnconfirmedTxsResponse)(nil),       // 60: api_pb.UnconfirmedTxsResponse
-	(*ValidatorsResponse)(nil),           // 61: api_pb.ValidatorsResponse
-	(*FrozenResponse)(nil),               // 62: api_pb.FrozenResponse
-	(*WaitListResponse)(nil),             // 63: api_pb.WaitListResponse
-	(*WaitListsResponse)(nil),            // 64: api_pb.WaitListsResponse
-	(*SwapPoolResponse)(nil),             // 65: api_pb.SwapPoolResponse
-	(*SwapPoolsResponse)(nil),            // 66: api_pb.SwapPoolsResponse
-	(*PriceCommissionResponse)(nil),      // 67: api_pb.PriceCommissionResponse
-	(*VersionNetworkResponse)(nil),       // 68: api_pb.VersionNetworkResponse
-	(*CommissionVotesResponse)(nil),      // 69: api_pb.CommissionVotesResponse
-	(*UpdateVotesResponse)(nil),          // 70: api_pb.UpdateVotesResponse
-	(*BlocksResponse)(nil),               // 71: api_pb.BlocksResponse
-	(*LimitOrderResponse)(nil),           // 72: api_pb.LimitOrderResponse
-	(*LimitOrdersOfPoolResponse)(nil),    // 73: api_pb.LimitOrdersOfPoolResponse
-	(*LimitOrdersResponse)(nil),          // 74: api_pb.LimitOrdersResponse
-	(*BestTradeResponse)(nil),            // 75: api_pb.BestTradeResponse
+	(*LimitOrdersByOwnerRequest)(nil),    // 37: api_pb.LimitOrdersByOwnerRequest
+	(*BestTradeRequest)(nil),             // 38: api_pb.BestTradeRequest
+	(*SubscribeResponse)(nil),            // 39: api_pb.SubscribeResponse
+	(*HaltsResponse)(nil),                // 40: api_pb.HaltsResponse
+	(*GenesisResponse)(nil),              // 41: api_pb.GenesisResponse
+	(*MinGasPriceResponse)(nil),          // 42: api_pb.MinGasPriceResponse
+	(*NetInfoResponse)(nil),              // 43: api_pb.NetInfoResponse
+	(*StatusResponse)(nil),               // 44: api_pb.StatusResponse
+	(*AddressResponse)(nil),              // 45: api_pb.AddressResponse
+	(*AddressesResponse)(nil),            // 46: api_pb.AddressesResponse
+	(*BlockResponse)(nil),                // 47: api_pb.BlockResponse
+	(*CandidateResponse)(nil),            // 48: api_pb.CandidateResponse
+	(*CandidatesResponse)(nil),           // 49: api_pb.CandidatesResponse
+	(*CoinInfoResponse)(nil),             // 50: api_pb.CoinInfoResponse
+	(*EstimateCoinBuyResponse)(nil),      // 51: api_pb.EstimateCoinBuyResponse
+	(*EstimateCoinSellResponse)(nil),     // 52: api_pb.EstimateCoinSellResponse
+	(*EstimateCoinSellAllResponse)(nil),  // 53: api_pb.EstimateCoinSellAllResponse
+	(*EstimateTxCommissionResponse)(nil), // 54: api_pb.EstimateTxCommissionResponse
+	(*EventsResponse)(nil),               // 55: api_pb.EventsResponse
+	(*MaxGasPriceResponse)(nil),          // 56: api_pb.MaxGasPriceResponse
+	(*MissedBlocksResponse)(nil),         // 57: api_pb.MissedBlocksResponse
+	(*SendTransactionResponse)(nil),      // 58: api_pb.SendTransactionResponse
+	(*TransactionResponse)(nil),          // 59: api_pb.TransactionResponse
+	(*TransactionsResponse)(nil),         // 60: api_pb.TransactionsResponse
+	(*UnconfirmedTxsResponse)(nil),       // 61: api_pb.UnconfirmedTxsResponse
+	(*ValidatorsResponse)(nil),           // 62: api_pb.ValidatorsResponse
+	(*FrozenResponse)(nil),               // 63: api_pb.FrozenResponse
+	(*WaitListResponse)(nil),             // 64: api_pb.WaitListResponse
+	(*WaitListsResponse)(nil),            // 65: api_pb.WaitListsResponse
+	(*SwapPoolResponse)(nil),             // 66: api_pb.SwapPoolResponse
+	(*SwapPoolsResponse)(nil),            // 67: api_pb.SwapPoolsResponse
+	(*PriceCommissionResponse)(nil),      // 68: api_pb.PriceCommissionResponse
+	(*VersionNetworkResponse)(nil),       // 69: api_pb.VersionNetworkResponse
+	(*CommissionVotesResponse)(nil),      // 70: api_pb.CommissionVotesResponse
+	(*UpdateVotesResponse)(nil),          // 71: api_pb.UpdateVotesResponse
+	(*BlocksResponse)(nil),               // 72: api_pb.BlocksResponse
+	(*LimitOrderResponse)(nil),           // 73: api_pb.LimitOrderResponse
+	(*LimitOrdersOfPoolResponse)(nil),    // 74: api_pb.LimitOrdersOfPoolResponse
+	(*LimitOrdersResponse)(nil),          // 75: api_pb.LimitOrdersResponse
+	(*BestTradeResponse)(nil),            // 76: api_pb.BestTradeResponse
 }
 var file_api_proto_depIdxs = []int32{
 	0,  // 0: api_pb.ApiService.Subscribe:input_type -> api_pb.SubscribeRequest
@@ -458,51 +468,53 @@ var file_api_proto_depIdxs = []int32{
 	34, // 38: api_pb.ApiService.LimitOrder:input_type -> api_pb.LimitOrderRequest
 	35, // 39: api_pb.ApiService.LimitOrdersOfPool:input_type -> api_pb.LimitOrdersOfPoolRequest
 	36, // 40: api_pb.ApiService.LimitOrders:input_type -> api_pb.LimitOrdersRequest
-	37, // 41: api_pb.ApiService.BestTrade:input_type -> api_pb.BestTradeRequest
-	38, // 42: api_pb.ApiService.Subscribe:output_type -> api_pb.SubscribeResponse
-	39, // 43: api_pb.ApiService.Halts:output_type -> api_pb.HaltsResponse
-	40, // 44: api_pb.ApiService.Genesis:output_type -> api_pb.GenesisResponse
-	41, // 45: api_pb.ApiService.MinGasPrice:output_type -> api_pb.MinGasPriceResponse
-	42, // 46: api_pb.ApiService.NetInfo:output_type -> api_pb.NetInfoResponse
-	43, // 47: api_pb.ApiService.Status:output_type -> api_pb.StatusResponse
-	44, // 48: api_pb.ApiService.Address:output_type -> api_pb.AddressResponse
-	45, // 49: api_pb.ApiService.Addresses:output_type -> api_pb.AddressesResponse
-	46, // 50: api_pb.ApiService.Block:output_type -> api_pb.BlockResponse
-	47, // 51: api_pb.ApiService.Candidate:output_type -> api_pb.CandidateResponse
-	48, // 52: api_pb.ApiService.Candidates:output_type -> api_pb.CandidatesResponse
-	49, // 53: api_pb.ApiService.CoinInfoById:output_type -> api_pb.CoinInfoResponse
-	49, // 54: api_pb.ApiService.CoinInfo:output_type -> api_pb.CoinInfoResponse
-	50, // 55: api_pb.ApiService.EstimateCoinBuy:output_type -> api_pb.EstimateCoinBuyResponse
-	51, // 56: api_pb.ApiService.EstimateCoinSell:output_type -> api_pb.EstimateCoinSellResponse
-	52, // 57: api_pb.ApiService.EstimateCoinSellAll:output_type -> api_pb.EstimateCoinSellAllResponse
-	53, // 58: api_pb.ApiService.EstimateTxCommission:output_type -> api_pb.EstimateTxCommissionResponse
-	54, // 59: api_pb.ApiService.Events:output_type -> api_pb.EventsResponse
-	55, // 60: api_pb.ApiService.MaxGasPrice:output_type -> api_pb.MaxGasPriceResponse
-	56, // 61: api_pb.ApiService.MissedBlocks:output_type -> api_pb.MissedBlocksResponse
-	57, // 62: api_pb.ApiService.SendTransaction:output_type -> api_pb.SendTransactionResponse
-	58, // 63: api_pb.ApiService.Transaction:output_type -> api_pb.TransactionResponse
-	59, // 64: api_pb.ApiService.Transactions:output_type -> api_pb.TransactionsResponse
-	60, // 65: api_pb.ApiService.UnconfirmedTxs:output_type -> api_pb.UnconfirmedTxsResponse
-	61, // 66: api_pb.ApiService.Validators:output_type -> api_pb.ValidatorsResponse
-	62, // 67: api_pb.ApiService.Frozen:output_type -> api_pb.FrozenResponse
-	62, // 68: api_pb.ApiService.FrozenAll:output_type -> api_pb.FrozenResponse
-	63, // 69: api_pb.ApiService.WaitList:output_type -> api_pb.WaitListResponse
-	64, // 70: api_pb.ApiService.WaitLists:output_type -> api_pb.WaitListsResponse
-	46, // 71: api_pb.ApiService.TestBlock:output_type -> api_pb.BlockResponse
-	65, // 72: api_pb.ApiService.SwapPool:output_type -> api_pb.SwapPoolResponse
-	66, // 73: api_pb.ApiService.SwapPools:output_type -> api_pb.SwapPoolsResponse
-	65, // 74: api_pb.ApiService.SwapPoolProvider:output_type -> api_pb.SwapPoolResponse
-	67, // 75: api_pb.ApiService.PriceCommission:output_type -> api_pb.PriceCommissionResponse
-	68, // 76: api_pb.ApiService.VersionNetwork:output_type -> api_pb.VersionNetworkResponse
-	69, // 77: api_pb.ApiService.CommissionVotes:output_type -> api_pb.CommissionVotesResponse
-	70, // 78: api_pb.ApiService.UpdateVotes:output_type -> api_pb.UpdateVotesResponse
-	71, // 79: api_pb.ApiService.Blocks:output_type -> api_pb.BlocksResponse
-	72, // 80: api_pb.ApiService.LimitOrder:output_type -> api_pb.LimitOrderResponse
-	73, // 81: api_pb.ApiService.LimitOrdersOfPool:output_type -> api_pb.LimitOrdersOfPoolResponse
-	74, // 82: api_pb.ApiService.LimitOrders:output_type -> api_pb.LimitOrdersResponse
-	75, // 83: api_pb.ApiService.BestTrade:output_type -> api_pb.BestTradeResponse
-	42, // [42:84] is the sub-list for method output_type
-	0,  // [0:42] is the sub-list for method input_type
+	37, // 41: api_pb.ApiService.LimitOrdersByOwner:input_type -> api_pb.LimitOrdersByOwnerRequest
+	38, // 42: api_pb.ApiService.BestTrade:input_type -> api_pb.BestTradeRequest
+	39, // 43: api_pb.ApiService.Subscribe:output_type -> api_pb.SubscribeResponse
+	40, // 44: api_pb.ApiService.Halts:output_type -> api_pb.HaltsResponse
+	41, // 45: api_pb.ApiService.Genesis:output_type -> api_pb.GenesisResponse
+	42, // 46: api_pb.ApiService.MinGasPrice:output_type -> api_pb.MinGasPriceResponse
+	43, // 47: api_pb.ApiService.NetInfo:output_type -> api_pb.NetInfoResponse
+	44, // 48: api_pb.ApiService.Status:output_type -> api_pb.StatusResponse
+	45, // 49: api_pb.ApiService.Address:output_type -> api_pb.AddressResponse
+	46, // 50: api_pb.ApiService.Addresses:output_type -> api_pb.AddressesResponse
+	47, // 51: api_pb.ApiService.Block:output_type -> api_pb.BlockResponse
+	48, // 52: api_pb.ApiService.Candidate:output_type -> api_pb.CandidateResponse
+	49, // 53: api_pb.ApiService.Candidates:output_type -> api_pb.CandidatesResponse
+	50, // 54: api_pb.ApiService.CoinInfoById:output_type -> api_pb.CoinInfoResponse
+	50, // 55: api_pb.ApiService.CoinInfo:output_type -> api_pb.CoinInfoResponse
+	51, // 56: api_pb.ApiService.EstimateCoinBuy:output_type -> api_pb.EstimateCoinBuyResponse
+	52, // 57: api_pb.ApiService.EstimateCoinSell:output_type -> api_pb.EstimateCoinSellResponse
+	53, // 58: api_pb.ApiService.EstimateCoinSellAll:output_type -> api_pb.EstimateCoinSellAllResponse
+	54, // 59: api_pb.ApiService.EstimateTxCommission:output_type -> api_pb.EstimateTxCommissionResponse
+	55, // 60: api_pb.ApiService.Events:output_type -> api_pb.EventsResponse
+	56, // 61: api_pb.ApiService.MaxGasPrice:output_type -> api_pb.MaxGasPriceResponse
+	57, // 62: api_pb.ApiService.MissedBlocks:output_type -> api_pb.MissedBlocksResponse
+	58, // 63: api_pb.ApiService.SendTransaction:output_type -> api_pb.SendTransactionResponse
+	59, // 64: api_pb.ApiService.Transaction:output_type -> api_pb.TransactionResponse
+	60, // 65: api_pb.ApiService.Transactions:output_type -> api_pb.TransactionsResponse
+	61, // 66: api_pb.ApiService.UnconfirmedTxs:output_type -> api_pb.UnconfirmedTxsResponse
+	62, // 67: api_pb.ApiService.Validators:output_type -> api_pb.ValidatorsResponse
+	63, // 68: api_pb.ApiService.Frozen:output_type -> api_pb.FrozenResponse
+	63, // 69: api_pb.ApiService.FrozenAll:output_type -> api_pb.FrozenResponse
+	64, // 70: api_pb.ApiService.WaitList:output_type -> api_pb.WaitListResponse
+	65, // 71: api_pb.ApiService.WaitLists:output_type -> api_pb.WaitListsResponse
+	47, // 72: api_pb.ApiService.TestBlock:output_type -> api_pb.BlockResponse
+	66, // 73: api_pb.ApiService.SwapPool:output_type -> api_pb.SwapPoolResponse
+	67, // 74: api_pb.ApiService.SwapPools:output_type -> api_pb.SwapPoolsResponse
+	66, // 75: api_pb.ApiService.SwapPoolProvider:output_type -> api_pb.SwapPoolResponse
+	68, // 76: api_pb.ApiService.PriceCommission:output_type -> api_pb.PriceCommissionResponse
+	69, // 77: api_pb.ApiService.VersionNetwork:output_type -> api_pb.VersionNetworkResponse
+	70, // 78: api_pb.ApiService.CommissionVotes:output_type -> api_pb.CommissionVotesResponse
+	71, // 79: api_pb.ApiService.UpdateVotes:output_type -> api_pb.UpdateVotesResponse
+	72, // 80: api_pb.ApiService.Blocks:output_type -> api_pb.BlocksResponse
+	73, // 81: api_pb.ApiService.LimitOrder:output_type -> api_pb.LimitOrderResponse
+	74, // 82: api_pb.ApiService.LimitOrdersOfPool:output_type -> api_pb.LimitOrdersOfPoolResponse
+	75, // 83: api_pb.ApiService.LimitOrders:output_type -> api_pb.LimitOrdersResponse
+	75, // 84: api_pb.ApiService.LimitOrdersByOwner:output_type -> api_pb.LimitOrdersResponse
+	76, // 85: api_pb.ApiService.BestTrade:output_type -> api_pb.BestTradeResponse
+	43, // [43:86] is the sub-list for method output_type
+	0,  // [0:43] is the sub-list for method input_type
 	0,  // [0:0] is the sub-list for extension type_name
 	0,  // [0:0] is the sub-list for extension extendee
 	0,  // [0:0] is the sub-list for field type_name

@@ -432,6 +432,16 @@ service ApiService {
         option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
     }
 
+    // LimitOrdersByOwner
+    //
+    // LimitOrdersByOwner returns orders by owner.
+    rpc LimitOrdersByOwner (LimitOrdersByOwnerRequest) returns (LimitOrdersResponse) {
+        option (google.api.http) = {
+            get: "/limit_orders_by_owner/{address}"
+        };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Coin";
+    }
+
     // BestTrade
     //
     // BestTrade returns optimal exchange route.
