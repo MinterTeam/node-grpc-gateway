@@ -108,6 +108,7 @@ type ApiServiceClient interface {
 	// SendTransaction
 	//
 	// SendTransaction returns the result of sending signed tx. To ensure that transaction was successfully committed to the blockchain, you need to find the transaction by the hash and ensure that the status code equals to 0.
+	//
 	SendTransaction(ctx context.Context, in *SendTransactionRequest, opts ...grpc.CallOption) (*SendTransactionResponse, error)
 	// Transaction
 	//
@@ -720,6 +721,7 @@ type ApiServiceServer interface {
 	// SendTransaction
 	//
 	// SendTransaction returns the result of sending signed tx. To ensure that transaction was successfully committed to the blockchain, you need to find the transaction by the hash and ensure that the status code equals to 0.
+	//
 	SendTransaction(context.Context, *SendTransactionRequest) (*SendTransactionResponse, error)
 	// Transaction
 	//
