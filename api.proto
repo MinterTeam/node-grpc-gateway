@@ -452,4 +452,14 @@ service ApiService {
         };
         option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Price";
     }
+
+    // Proof
+    //
+    // Proof ...
+    rpc Proof (ProofRequest) returns (ProofResponse) {
+        option (google.api.http) = {
+            get: "/proof"
+        };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation).tags = "Blockchain";
+    }
 }
