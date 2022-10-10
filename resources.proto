@@ -21,16 +21,16 @@ message ProofRequest {
   uint64 height = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
     type: INTEGER
   }];
-  bytes key = 2;
+  repeated string keys = 2;
 }
 message ProofResponse {
-  bytes storageHash = 1;
+  string storageHash = 1;
   message StorageProof {
-    bytes key = 1;
+    string key = 1;
     repeated string proof = 3;
-    bytes value = 2;
+    string value = 2;
   }
-  StorageProof storageProof = 2;
+  repeated StorageProof storageProof = 2;
 }
 
 message BestTradeRequest {

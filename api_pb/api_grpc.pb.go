@@ -108,7 +108,6 @@ type ApiServiceClient interface {
 	// SendTransaction
 	//
 	// SendTransaction returns the result of sending signed tx. To ensure that transaction was successfully committed to the blockchain, you need to find the transaction by the hash and ensure that the status code equals to 0.
-	//
 	SendTransaction(ctx context.Context, in *SendTransactionRequest, opts ...grpc.CallOption) (*SendTransactionResponse, error)
 	// Transaction
 	//
@@ -199,6 +198,10 @@ type ApiServiceClient interface {
 	//
 	// BestTrade returns optimal exchange route.
 	BestTrade(ctx context.Context, in *BestTradeRequest, opts ...grpc.CallOption) (*BestTradeResponse, error)
+	// Proof
+	//
+	// Proof ...
+	Proof(ctx context.Context, in *ProofRequest, opts ...grpc.CallOption) (*ProofResponse, error)
 }
 
 type apiServiceClient struct {
@@ -619,6 +622,15 @@ func (c *apiServiceClient) BestTrade(ctx context.Context, in *BestTradeRequest, 
 	return out, nil
 }
 
+func (c *apiServiceClient) Proof(ctx context.Context, in *ProofRequest, opts ...grpc.CallOption) (*ProofResponse, error) {
+	out := new(ProofResponse)
+	err := c.cc.Invoke(ctx, "/api_pb.ApiService/Proof", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // ApiServiceServer is the server API for ApiService service.
 // All implementations must embed UnimplementedApiServiceServer
 // for forward compatibility
@@ -708,7 +720,6 @@ type ApiServiceServer interface {
 	// SendTransaction
 	//
 	// SendTransaction returns the result of sending signed tx. To ensure that transaction was successfully committed to the blockchain, you need to find the transaction by the hash and ensure that the status code equals to 0.
-	//
 	SendTransaction(context.Context, *SendTransactionRequest) (*SendTransactionResponse, error)
 	// Transaction
 	//
@@ -799,6 +810,10 @@ type ApiServiceServer interface {
 	//
 	// BestTrade returns optimal exchange route.
 	BestTrade(context.Context, *BestTradeRequest) (*BestTradeResponse, error)
+	// Proof
+	//
+	// Proof ...
+	Proof(context.Context, *ProofRequest) (*ProofResponse, error)
 	mustEmbedUnimplementedApiServiceServer()
 }
 
@@ -934,6 +949,9 @@ func (UnimplementedApiServiceServer) LimitOrdersByOwner(context.Context, *LimitO
 }
 func (UnimplementedApiServiceServer) BestTrade(context.Context, *BestTradeRequest) (*BestTradeResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method BestTrade not implemented")
+}
+func (UnimplementedApiServiceServer) Proof(context.Context, *ProofRequest) (*ProofResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Proof not implemented")
 }
 func (UnimplementedApiServiceServer) mustEmbedUnimplementedApiServiceServer() {}
 
@@ -1725,6 +1743,24 @@ func _ApiService_BestTrade_Handler(srv interface{}, ctx context.Context, dec fun
 	return interceptor(ctx, in, info, handler)
 }
 
+func _ApiService_Proof_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ProofRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ApiServiceServer).Proof(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/api_pb.ApiService/Proof",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ApiServiceServer).Proof(ctx, req.(*ProofRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // ApiService_ServiceDesc is the grpc.ServiceDesc for ApiService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -1899,6 +1935,10 @@ var ApiService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "BestTrade",
 			Handler:    _ApiService_BestTrade_Handler,
+		},
+		{
+			MethodName: "Proof",
+			Handler:    _ApiService_Proof_Handler,
 		},
 	},
 	Streams: []grpc.StreamDesc{
